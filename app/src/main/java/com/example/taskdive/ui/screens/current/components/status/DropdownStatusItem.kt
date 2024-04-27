@@ -1,4 +1,4 @@
-package com.example.taskdive.ui.screens.current.components
+package com.example.taskdive.ui.screens.current.components.status
 
 import androidx.compose.runtime.Composable
 /*

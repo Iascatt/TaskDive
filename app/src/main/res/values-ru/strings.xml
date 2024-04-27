@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tasks">Задачи</string>
+    <string name="add_task">Добавить задачу</string>
+    <string name="empty_list">Нет задач</string>
+    <string name="save_changes">Сохранить изменения</string>
+    <string name="save_task">Сохранить задачу</string>
+</resources>

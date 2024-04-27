@@ -24,7 +24,8 @@ fun TaskEntity.toTaskModel(): Task {
 
 fun Task.toTaskEntity(): TaskEntity {
     return TaskEntity(
-        taskId,
+
+        null,
         title,
         info,
         status,

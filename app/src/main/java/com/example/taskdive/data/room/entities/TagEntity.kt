@@ -8,7 +8,7 @@ import com.example.taskdive.domain.models.Tag
 
 @Entity
 data class TagEntity(
-    @PrimaryKey val tagId: Int,
+    @PrimaryKey(autoGenerate = true) val tagId: Int,
     @ColumnInfo(name = "title") val title: String?,
     @ColumnInfo(name = "color") val color: Int?
 )

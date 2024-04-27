@@ -15,7 +15,7 @@ object ProfileTab: Tab {
     override val options: TabOptions
         @Composable
         get() {
-            val title = stringResource(R.string.tasks)
+            val title = stringResource(R.string.profile)
 
             return remember {
                 TabOptions(

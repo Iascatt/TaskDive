@@ -1,5 +1,5 @@
 package com.example.taskdive.di
-/*
+
 import androidx.room.Room
 import com.example.taskdive.data.repository.DiveRepository
 import com.example.taskdive.data.repository.DiveRepositoryImpl
@@ -18,4 +18,4 @@ val dataModule = module {
     }
     single<DiveStore> { DiveStoreImpl(get()) }
     single<DiveRepository> { DiveRepositoryImpl(get()) }
-}*/
+}

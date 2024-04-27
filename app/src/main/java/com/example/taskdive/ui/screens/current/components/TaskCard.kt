@@ -59,7 +59,7 @@ fun TaskCard(
                     fontWeight = FontWeight.Bold
                 )
             }
-            PlantImage(
+           PlantImage(
                 modifier = Modifier
                     .weight(5f)
                     .padding(vertical = 15.dp, horizontal = 5.dp)

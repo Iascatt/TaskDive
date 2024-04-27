@@ -1,7 +1,9 @@
 package com.example.taskdive
 
 import android.app.Application
+import com.example.taskdive.di.dataModule
 import com.example.taskdive.di.managementModule
+import com.example.taskdive.di.useCasesModule
 import com.example.taskdive.di.viewModelModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
@@ -14,9 +16,7 @@ class DiveApplication : Application() {
         GlobalContext.startKoin {
             androidLogger()
             androidContext(this@DiveApplication)
-            // modules(dataModule)
-            modules(managementModule)
-            modules(viewModelModule)
+            modules(dataModule, managementModule, useCasesModule, viewModelModule)
         }
     }
 }

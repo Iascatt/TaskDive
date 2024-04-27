@@ -9,7 +9,8 @@ import java.util.Date
 
 @Entity
 data class TaskEntity(
-    @PrimaryKey val taskId: Int,
+    @PrimaryKey(autoGenerate = true)
+    val taskId: Int?,
     // основная информация
     @ColumnInfo(name = "title", defaultValue = "") val title: String,
     @ColumnInfo(name = "info") val info: String?,

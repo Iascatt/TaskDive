@@ -15,7 +15,7 @@ object StatisticsTab: Tab {
     override val options: TabOptions
         @Composable
         get() {
-            val title = stringResource(R.string.tasks)
+            val title = stringResource(R.string.statistics)
 
             return remember {
                 TabOptions(

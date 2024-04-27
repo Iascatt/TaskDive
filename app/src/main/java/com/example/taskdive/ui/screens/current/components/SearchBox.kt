@@ -4,6 +4,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material3.TextField
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Search
+import androidx.compose.material3.Card
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -21,7 +22,7 @@ fun SearchBox(
         value = searchText ?: "",
         onValueChange = onValueChange,
         label = { label?.let { Text(it) } },
-        trailingIcon = {
+        leadingIcon = {
             Icon(
                 painter = rememberVectorPainter(Icons.Default.Search),
                 contentDescription = "search"

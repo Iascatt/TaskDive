@@ -27,6 +27,7 @@ interface TaskDao {
     suspend fun deleteAllTasks()
 
     // фильтрация
+    /*
     @Query("SELECT Task.* " +
             "FROM TaskEntity Task INNER JOIN TaskTagCrossRef CrossRef " +
             "ON Task.taskId = CrossRef.taskId " +
@@ -34,7 +35,7 @@ interface TaskDao {
             "ORDER BY importance")
     suspend fun getFilteredTasksSortByImportance(
         searchText: String,
-        tagId: TagEntity
+        tagId: Int
     ): List<TaskEntity>
 
     @Query("SELECT Task.* " +
@@ -44,7 +45,7 @@ interface TaskDao {
             "ORDER BY fin_date")
     suspend fun getFilteredTasksSortByUrgency(
         searchText: String,
-        tagId: TagEntity
+        tagId: Int
     ): List<TaskEntity>
 
 
@@ -55,9 +56,9 @@ interface TaskDao {
             "ORDER BY difficulty")
     suspend fun getFilteredTasksSortByDifficulty(
         searchText: String,
-        tagId: TagEntity
+        tagId: Int
     ): List<TaskEntity>
-
+*/
     // вложенность
     @Query("SELECT Task.* " +
             "FROM TaskEntity Task INNER JOIN SupertaskSubtaskCrossRef CrossRef " +

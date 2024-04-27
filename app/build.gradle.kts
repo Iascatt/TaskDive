@@ -1,6 +1,7 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("kotlin-kapt")
 }
 
 android {
@@ -9,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.taskdive"
-        minSdk = 24
+        minSdk = 26
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -32,6 +33,7 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
+        isCoreLibraryDesugaringEnabled = true
     }
     kotlinOptions {
         jvmTarget = "1.8"
@@ -51,6 +53,7 @@ android {
 
 dependencies {
 
+    // Core + Compose
     implementation("androidx.core:core-ktx:1.13.0")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
     implementation("androidx.activity:activity-compose:1.9.0")
@@ -66,4 +69,45 @@ dependencies {
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
+
+    // Room
+    val roomVersion = "2.6.1"
+
+    implementation("androidx.room:room-runtime:$roomVersion")
+    annotationProcessor("androidx.room:room-compiler:$roomVersion")
+    kapt("androidx.room:room-compiler:$roomVersion")
+    implementation("androidx.room:room-ktx:$roomVersion")
+
+
+    // Material
+    val materialVersion = "1.2.1"
+
+    implementation("androidx.compose.material:material")
+    implementation("androidx.compose.material3:material3:${materialVersion}")
+    implementation("androidx.compose.material:material-icons-extended")
+
+    // Voyager
+    val voyagerVersion = "1.0.0-rc05"
+
+    implementation("cafe.adriel.voyager:voyager-navigator:$voyagerVersion")
+    implementation("cafe.adriel.voyager:voyager-tab-navigator:$voyagerVersion")
+    implementation("cafe.adriel.voyager:voyager-bottom-sheet-navigator:$voyagerVersion")
+    implementation("cafe.adriel.voyager:voyager-transitions:$voyagerVersion")
+    implementation("cafe.adriel.voyager:voyager-androidx:$voyagerVersion")
+    implementation("cafe.adriel.voyager:voyager-koin:$voyagerVersion")
+
+    // Koin
+    val koinAndroidVersion = "3.5.0"
+    implementation("io.insert-koin:koin-android:$koinAndroidVersion")
+    implementation("io.insert-koin:koin-androidx-compose:$koinAndroidVersion")
+
+    // ComposeCalendar
+    val calendarVersion = "1.2.0"
+    implementation("io.github.boguszpawlowski.composecalendar:composecalendar:$calendarVersion")
+    implementation("io.github.boguszpawlowski.composecalendar:kotlinx-datetime:$calendarVersion")
+
+    // Desugaring
+    val desugaringVersion = "2.0.4"
+    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:$desugaringVersion")
+
 }

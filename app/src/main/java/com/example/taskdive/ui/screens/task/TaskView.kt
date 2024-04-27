@@ -18,7 +18,6 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.modifier.modifierLocalConsumer
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import cafe.adriel.voyager.navigator.LocalNavigator
@@ -28,10 +27,8 @@ import com.example.taskdive.domain.models.Task
 import com.example.taskdive.domain.models.Weekday
 import com.example.taskdive.ui.screens.UiState
 import com.example.taskdive.ui.screens.common.components.Rounding
-import com.example.taskdive.ui.screens.common.screens.NestedView
 import com.example.taskdive.ui.screens.common.screens.TabView
 import com.example.taskdive.ui.screens.current.components.status.DropdownStatusMenu
-import org.koin.androidx.compose.getViewModel
 import java.util.Date
 
 @Composable
@@ -65,19 +62,6 @@ fun TaskView(
         repeatThrough = task.repeatThrough
         importance = task.importance
         difficulty = task.difficulty
-    }
-
-    fun resetFields() {
-        title = ""
-        info = null
-        startDate = null
-        finDate = null
-        repeatEveryDayOfWeek = null
-        repeatEveryDayOfMonth = null
-        repeatEveryDayOfYear = null
-        repeatThrough = null
-        importance = null
-        difficulty = null
     }
 
     val tasksState = viewModel.taskState.collectAsState()

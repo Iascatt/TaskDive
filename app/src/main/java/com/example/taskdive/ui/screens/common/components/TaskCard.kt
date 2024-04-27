@@ -1,6 +1,5 @@
 package com.example.taskdive.ui.screens.common.components
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -17,10 +16,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import cafe.adriel.voyager.navigator.LocalNavigator
-import com.example.taskdive.domain.models.Status
 import com.example.taskdive.domain.models.Task
 import com.example.taskdive.ui.screens.current.components.status.DropdownStatusMenu
 import com.example.taskdive.ui.screens.task.Modes

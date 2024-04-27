@@ -1,13 +1,10 @@
 package com.example.taskdive.ui.screens.current.components.status
 
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Eco
-import androidx.compose.material.icons.outlined.Battery4Bar
 import androidx.compose.material.icons.outlined.Cancel
 import androidx.compose.material.icons.outlined.Check
 import androidx.compose.material.icons.outlined.Circle
 import androidx.compose.material.icons.outlined.IncompleteCircle
-import androidx.compose.material.icons.outlined.Timelapse
 import androidx.compose.material.icons.outlined.TimerOff
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton

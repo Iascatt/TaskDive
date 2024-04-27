@@ -2,14 +2,13 @@ package com.example.taskdive.ui.screens.current
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.taskdive.domain.models.Task
 import com.example.taskdive.domain.State
+import com.example.taskdive.domain.models.Task
 import com.example.taskdive.domain.usecases.list.TaskListUseCase
 import com.example.taskdive.ui.screens.UiState
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.flow.filter
 import kotlinx.coroutines.launch
 
 class CurrentTasksViewModel(

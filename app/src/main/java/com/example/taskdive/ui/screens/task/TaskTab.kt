@@ -7,9 +7,8 @@ import cafe.adriel.voyager.navigator.Navigator
 import cafe.adriel.voyager.navigator.tab.Tab
 import cafe.adriel.voyager.navigator.tab.TabOptions
 import com.example.taskdive.R
-import org.koin.androidx.compose.getViewModel
 
-object TaskTab: Tab {
+object TaskTab : Tab {
 
     override val options: TabOptions
         @Composable

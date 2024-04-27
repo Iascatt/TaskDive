@@ -13,7 +13,6 @@ class CreateTaskUseCase(
     private val repository: DiveRepository
 ) {
 
-    fun checkInput(){}
     fun createTask(
         title: String?,
         info: String?,

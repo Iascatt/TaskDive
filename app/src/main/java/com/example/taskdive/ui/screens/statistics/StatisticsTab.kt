@@ -7,7 +7,6 @@ import cafe.adriel.voyager.navigator.Navigator
 import cafe.adriel.voyager.navigator.tab.Tab
 import cafe.adriel.voyager.navigator.tab.TabOptions
 import com.example.taskdive.R
-import com.example.taskdive.ui.screens.current.CurrentTasksScreen
 import org.koin.androidx.compose.getViewModel
 
 object StatisticsTab: Tab {
